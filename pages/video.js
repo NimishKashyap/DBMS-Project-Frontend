@@ -4,9 +4,11 @@ import Videos from "../components/Videos";
 import Description from "../components/Description";
 import Comments from "../components/Comments";
 import AddComments from "../components/AddComments";
+import { useState } from "react";
 function video() {
     const router = useRouter();
     const { id } = router.query;
+    const [status, setStatus] = useState(0);
 
     return (
         <div>
@@ -16,8 +18,8 @@ function video() {
                 <Description id={id} />
             </div>
             <div className="flex justify-around">
-                <Comments id={id} />
-                <AddComments id={id} />
+                <Comments status={status} id={id} />
+                <AddComments id={id} setStatus={setStatus}/>
             </div>
         </div>
     );

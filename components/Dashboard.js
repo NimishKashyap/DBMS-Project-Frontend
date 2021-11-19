@@ -29,9 +29,9 @@ function Dashboard() {
     }, []);
     return (
         <>
-            <div className="mx-10 min-w-full bg-gray-100 justify-center items-center text-gray-800 py-40 rounded-2xl">
+            <div className="mx-10 min-w-1/2 max-w-screen bg-gray-100 justify-center items-center text-gray-800 py-40 rounded-2xl">
                 <div className="flex">
-                    <div className="min-w-min bg-[#06202A] text-gray-50 p-40 rounded-2xl shadow-2xl">
+                    <div className="min-w-min bg-[#06202A] text-gray-50 p-40 rounded-2xl shadow-2xl ml-10">
                         <h1 className="font-bold italic text-2xl underline mb-5">
                             User Dashboard
                         </h1>
@@ -52,7 +52,7 @@ function Dashboard() {
                 </div>
                 <button
                     onClick={handleLogOut}
-                    className="bg-[#42887C] px-10 py-3 mt-5 rounded-3xl shadow-lg text-gray-50 font-bold hover:scale-125 duration-100 hover:bg-[#289785]"
+                    className="bg-[#42887C] px-10 py-3 mt-5 ml-72 rounded-3xl shadow-lg text-gray-50 font-bold hover:scale-125 duration-100 hover:bg-[#289785]"
                 >
                     Log Out
                 </button>

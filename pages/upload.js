@@ -58,7 +58,7 @@ function upload() {
                         placeholder="Description"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
-                        className="mx-20 my-5 px-6 py-5 rounded-2xl placeholder:text-gray-900"
+                        className="mx-20 my-5 px-6 py-5 rounded-2xl placeholder:text-gray-900 text-gray-900"
                     />
 
                     <span className="mx-20 text-white bg-gray-700 rounded-xl my-3 p-2">

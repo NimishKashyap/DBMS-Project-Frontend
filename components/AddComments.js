@@ -2,8 +2,8 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-function AddComments({ id }) {
-    const [status, setStatus] = useState(0);
+function AddComments({ id, setStatus }) {
+    // const [status, setStatus] = useState(0);
     const router = useRouter();
     const [comment, setComment] = useState("");
     const [user, setUser] = useState({});
@@ -21,8 +21,8 @@ function AddComments({ id }) {
                 console.log(res);
                 if (res.status === 200) {
                     alert("Comment inserted");
-                    // router.push(router.asPath);
-                    window.location.reload();
+                    setComment("");
+                    setStatus((state) => state + 1);
                 }
             });
     };
@@ -30,7 +30,7 @@ function AddComments({ id }) {
         setUser(JSON.parse(localStorage.getItem("iduser")));
     }, []);
     return (
-        <div className="flex flex-col flex-grow p-5 bg-gray-500 rounded-lg">
+        <div className="flex flex-col text-gray-900 min-h-20 p-5 px-24 bg-gray-500 rounded-lg items-start h-full">
             <input
                 type="text"
                 placeholder="Enter Comments"
@@ -38,7 +38,12 @@ function AddComments({ id }) {
                 className="placeholder:text-gray-900 rounded-2xl px-5 py-2"
                 onChange={(e) => setComment(e.target.value)}
             />
-            <button onClick={handlePost}> POST </button>
+            <button
+                className="text-gray-50 w-full my-3 bg-gray-900 px-2 py-3 rounded-lg hover:bg-gray-500 shadow-2xl transform scale-105 transition duration-100"
+                onClick={handlePost}
+            >
+                POST
+            </button>
         </div>
     );
 }

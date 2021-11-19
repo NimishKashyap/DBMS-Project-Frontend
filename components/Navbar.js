@@ -34,6 +34,8 @@ function Navbar() {
         <header className="flex flex-col sm:flex-row m-5 justify-between items-center h-auto">
             <Image
                 src={require("../public/logo.svg")}
+                onClick={() => router.push("/")}
+                className="cursor-pointer"
                 objectFit="cover"
                 width={500}
                 height={80}
