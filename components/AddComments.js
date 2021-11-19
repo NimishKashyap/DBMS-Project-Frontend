@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 function AddComments({ id, setStatus }) {
-    // const [status, setStatus] = useState(0);
     const router = useRouter();
     const [comment, setComment] = useState("");
     const [user, setUser] = useState({});
